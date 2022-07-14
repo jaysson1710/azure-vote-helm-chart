@@ -4,6 +4,7 @@ metadata:
   name: vote-back-{{.Release.Name}}
   labels:
     name: vote-back-{{.Release.Name}}
+  namespace: ecptrue
 spec:
   ports:
   - port: 6379
@@ -16,6 +17,7 @@ metadata:
   name: {{ .Values.serviceNameFront }}
   labels:
     name: {{ .Values.serviceNameFront }}
+  namespace: ecptrue
 spec:
   type: {{ .Values.serviceType }}
   ports:

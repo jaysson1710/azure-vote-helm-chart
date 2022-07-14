@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: vote-back-{{.Release.Name}}
+  namespace: ecptrue
 spec:
   replicas: 1
   selector:
@@ -23,6 +24,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: vote-front-{{.Release.Name}}
+  namespace: ecptrue
 spec:
   replicas: 1
   selector:
